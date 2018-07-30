@@ -5,7 +5,7 @@ apt-get install gpgv2 autoconf bison build-essential curl git-core libapr1 libap
 # Configure postgres db
 su postgres
 createuser msfuser -S -R
-createdb msfdb -0 msfuser
+createdb msfdb -O msfuser
 exit
 update-rc.d postgresql enable
 
