@@ -4,7 +4,7 @@ apt-get install gpgv2 autoconf bison build-essential curl git-core libapr1 libap
 
 # Configure postgres db
 su postgres
-createuser msfuser -S -R -P
+createuser msfuser -S -R
 createdb msfdb -0 msfuser
 exit
 update-rc.d postgresql enable
@@ -17,7 +17,6 @@ source ~/.rvm/scripts/rvm
 # Download and install msf
 git clone https://github.com/rapid7/metasploit-framework.git
 cd metasploit-framework/
-rvm --install .ruby-version
 gem install bundler
 bundle install
 
